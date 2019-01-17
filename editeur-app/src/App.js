@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import { sampleText } from './sampleText'
 
 class App extends Component {
   render() {
@@ -7,15 +8,18 @@ class App extends Component {
       <div className='container'>
         <div className='row'>
           <div className='col-sm-6'>
-            <textarea className='form-control' rows='35'/>
+            <textarea
+              value={sampleText}
+              className='form-control' 
+              rows='35' />
           </div>
           <div className='col-sm-6'>
-            <h1>Résultat</h1>
+            {sampleText}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
